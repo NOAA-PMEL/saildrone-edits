@@ -23,6 +23,9 @@ for root, dirs, files in os.walk('/home/users/koukel/tomcat/content/erddap/erdda
             no_time = dT.findall('./dataVariable[sourceName="time"]')
             no_lat = dT.findall('./dataVariable[sourceName="latitude"]')
             no_lon = dT.findall('./dataVariable[sourceName="longitude"]')
+            no_TIME = dT.findall('./dataVariable[sourceName="TIME"]')
+            no_LAT = dT.findall('./dataVariable[sourceName="LAT"]')
+            no_LON = dT.findall('./dataVariable[sourceName="LON"]')
             no_traj = dT.findall('./dataVariable[sourceName="trajectory"]')
             no_sog = dT.findall('./dataVariable[sourceName="SOG"]')
             no_sfm = dT.findall('./dataVariable[sourceName="SOG_FILTERED_MEAN"]')
@@ -86,7 +89,7 @@ for root, dirs, files in os.walk('/home/users/koukel/tomcat/content/erddap/erdda
             no_wcsm = dT.findall('./dataVariable[sourceName="WATER_CURRENT_SPEED_MEAN"]')
             no_wcdm = dT.findall('./dataVariable[sourceName="WATER_CURRENT_DIRECTION_MEAN"]')
     
-            noremlist = no_time + no_lat + no_lon + no_traj + no_sog + no_sfm + no_sfs + no_sfmx + no_sfmn + no_cog + no_cfm + no_cfs + no_hdg + no_hfm + no_hfs + no_rfm + no_rfs + no_rfp + no_pfm + no_pfs  + no_pfp + no_hdgw + no_whfm + no_whfs + no_wrfm + no_wrfs + no_wrfp + no_wpfm + no_wpfs + no_wpfp + no_wa + no_wfm + no_wfs + no_wsm + no_wss + no_uwm + no_uws + no_vwm + no_vws + no_wwm + no_wws + no_gwm + no_gws + no_wmhm + no_wmhs + no_tam + no_tas + no_rhm + no_rhs + no_bpm + no_bps + no_tiswum + no_tiswus + no_wdp + no_wsh + no_tdhm + no_tdhs + no_tsm + no_tsd + no_ssm + no_sss + no_csm + no_css + no_wcsm + no_wcdm
+            noremlist = no_time + no_lat + no_lon + no_TIME + no_LAT + no_LON + no_traj + no_sog + no_sfm + no_sfs + no_sfmx + no_sfmn + no_cog + no_cfm + no_cfs + no_hdg + no_hfm + no_hfs + no_rfm + no_rfs + no_rfp + no_pfm + no_pfs  + no_pfp + no_hdgw + no_whfm + no_whfs + no_wrfm + no_wrfs + no_wrfp + no_wpfm + no_wpfs + no_wpfp + no_wa + no_wfm + no_wfs + no_wsm + no_wss + no_uwm + no_uws + no_vwm + no_vws + no_wwm + no_wws + no_gwm + no_gws + no_wmhm + no_wmhs + no_tam + no_tas + no_rhm + no_rhs + no_bpm + no_bps + no_tiswum + no_tiswus + no_wdp + no_wsh + no_tdhm + no_tdhs + no_tsm + no_tsd + no_ssm + no_sss + no_csm + no_css + no_wcsm + no_wcdm
         
             rem = dT.findall('./dataVariable')
             for x in range(len(rem)):    

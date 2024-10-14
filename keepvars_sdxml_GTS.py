@@ -22,6 +22,9 @@ for root, dirs, files in os.walk('/home/users/koukel/tomcat/content/erddap/erdda
             no_time = dT.findall('./dataVariable[sourceName="time"]')
             no_lat = dT.findall('./dataVariable[sourceName="latitude"]')
             no_lon = dT.findall('./dataVariable[sourceName="longitude"]')
+            no_TIME = dT.findall('./dataVariable[sourceName="TIME"]')
+            no_LAT = dT.findall('./dataVariable[sourceName="LAT"]')
+            no_LON = dT.findall('./dataVariable[sourceName="LON"]')
             no_traj = dT.findall('./dataVariable[sourceName="trajectory"]')
             no_tam = dT.findall('./dataVariable[sourceName="TEMP_AIR_MEAN"]')
             no_rm = dT.findall('./dataVariable[sourceName="RH_MEAN"]')
@@ -35,7 +38,7 @@ for root, dirs, files in os.walk('/home/users/koukel/tomcat/content/erddap/erdda
             no_wdp = dT.findall('./dataVariable[sourceName="WAVE_DOMINANT_PERIOD"]')
             no_wsh = dT.findall('./dataVariable[sourceName="WAVE_SIGNIFICANT_HEIGHT"]')
             
-            noremlist = no_time + no_lat + no_lon + no_traj + no_tam + no_rm + no_bpm + no_tsm + no_wfm + no_wsm + no_ssm + no_wcsm + no_wcdm + no_wdp + no_wsh
+            noremlist = no_time + no_lat + no_lon no_TIME + no_LAT + no_LON + no_traj + no_tam + no_rm + no_bpm + no_tsm + no_wfm + no_wsm + no_ssm + no_wcsm + no_wcdm + no_wdp + no_wsh
         
             rem = dT.findall('./dataVariable')
             for x in range(len(rem)):    
